@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'HanziPen TC';
+  src: url("@/font/hanzipen-tc-bold.otf");
+}
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  color: $gray-300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.head1-m {
+  font-size: 50px;
+}
+
+.head1-l {
+  font-size: 80px;
+}
+
+.head1-sm {
+  @media (max-width: 576px) {
+    font-size: 34px;
+  }
+}
+
+.head2 {
+  font-size: 2.5rem;
+}
+
+.head2-sm {
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
+}
+
+.head3 {
+  font-size: 34px;
+}
+.head4 {
+  font-size: 28px;
+}

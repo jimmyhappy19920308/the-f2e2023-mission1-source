@@ -1,3 +1,8 @@
+.header {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .logo {
   display: inline-block;
   width: 140px;
@@ -10,7 +15,7 @@
   white-space: nowrap;
   overflow: hidden;
   transition: all .3s;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 1.25rem;
@@ -30,26 +35,26 @@
       letter-spacing: 0.04em;
       transition: box-shadow .3s;
       color: $white;
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         transition: box-shadow 1s;
       }
       &:focus {
         color: $white;
-        @media (max-width: 768px) {
-          box-shadow: inset 600px 0 0 0 $pink;
+        @media (max-width: 992px) {
+          box-shadow: inset 992px 0 0 0 $pink;
         }
       }
       &:hover {
         color: $white;
         box-shadow: inset 0 80px 0 0 $pink;
-        @media (max-width: 768px) {
-          box-shadow: inset 600px 0 0 0 $pink;
+        @media (max-width: 992px) {
+          box-shadow: inset 992px 0 0 0 $pink;
           // box-shadow: none;
         }
       }
       &:active {
-        @media (max-width: 768px) {
-          box-shadow: inset 600px 0 0 0 $pink;
+        @media (max-width: 992px) {
+          box-shadow: inset 992px 0 0 0 $pink;
         }
       }
     }
@@ -57,25 +62,25 @@
       a{
         color: $pink-300;
         &:focus {
-          @media (max-width: 768px) {
+          @media (max-width: 992px) {
             color: $white;
-            box-shadow: inset 600px 0 0 0 $pink;
+            box-shadow: inset 992px 0 0 0 $pink;
           }
         }
         &:hover {
           color: $white;
           box-shadow: inset 0 80px 0 0 $pink;
-          @media (max-width: 768px) {
+          @media (max-width: 992px) {
             color: $white;
-            box-shadow: inset 600px 0 0 0 $pink;
+            box-shadow: inset 992px 0 0 0 $pink;
             // box-shadow: none;
           }
         }
         &:active {
           color: $pink-300;
-          @media (max-width: 768px) {
+          @media (max-width: 992px) {
             color: $white;
-            box-shadow: inset 600px 0 0 0 $pink;
+            box-shadow: inset 992px 0 0 0 $pink;
           }
         }
       }
@@ -106,4 +111,48 @@
   height: 48px;
   top: 16px;
   right: 84px;
+}
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  // border: 3px solid #ffffff;
+  &-burger {
+    width: 24px;
+    height: 3px;
+    background-color: $white;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      transition: all .3s ease-in-out;
+      background-color: $white;
+      border-radius: 5px;
+    }
+    &::after {
+      transform: translateY(-8px);
+    }
+    &::before {
+      transform: translateY(8px);
+    }
+  }
+}
+
+.menu-btn.open .menu-btn-burger {
+  background: transparent;
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
 }

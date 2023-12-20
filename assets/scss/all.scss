@@ -36,6 +36,7 @@
 @import "../../node_modules/bootstrap/scss/forms/labels";
 @import "../../node_modules/bootstrap/scss/forms/validation";
 @import "../../node_modules/bootstrap/scss/forms/form-check";
+@import "../../node_modules/bootstrap/scss/modal";
 // @import "../../node_modules/bootstrap/scss/forms/form-select";
 // @import "../../node_modules/bootstrap/scss/list-group";
 // @import "../../node_modules/bootstrap/scss/pagination";
@@ -49,6 +50,9 @@
 @import './custom-fonts-family';
 @import './custom-fonts-size';
 @import './custom-text';
+@import './custom-max-width';
+@import './custom-height';
+
 // @import './custom-background';
 
 

@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,88 +17,148 @@
       rel="stylesheet"
     />
     <link href="https://fonts.cdnfonts.com/css/bartex" rel="stylesheet" />
-    <script
-      src="https://c.webfontfree.com/c.js?f=MYoyoHK-Medium"
-      type="text/javascript"
-    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <!-- slick css -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- slick css -->
   </head>
 
-  <body>
+  <body class="position-relative">
     <%- include('./layout/header'); -%>
     <!-- <h2 class=""><span
         class="bartex-title font-family-bartex text-white">News</span>
       <span class="">最新消息</span></h2> -->
     <div class="wrap">
-      <section class="banner"></section>
-      <div class="container pt-30">
+      <section class="banner">
+        <img
+          class="banner-animate d-none d-md-block"
+          src="../assets/images/banner_anime_pc.gif"
+          alt=""
+        />
+        <img
+          class="banner-animate d-block d-md-none"
+          src="../assets/images/img_banner_anime_mb_430.gif"
+          alt=""
+        />
+      </section>
+      <div class="container pt-30 pt-md-10 pt-lg-30">
         <!-- About Start -->
-        <section class="about-me mb-30">
-          <h1 class="about-me-title text-center mb-10">
+        <section id="about-me" class="about-me mb-20 mb-lg-30">
+          <h1 class="about-me-title text-center lh-1 mb-10">
             <span class="head1-l font-family-bartex about-me-title-en me-3"
               >About</span
-            ><span class="about-me-title-tw head1-m font-family-noto fw-bold"
+            ><span
+              class="about-me-title-tw head1-m head1-mobile font-family-noto fw-bold"
               >關於我</span
             >
           </h1>
-          <div class="about-me-content d-flex px-4 px-md-10 px-lg-14 py-7">
-            <div class="me-20">
+          <div
+            class="about-me-content d-flex flex-lg-row flex-column justify-content-between align-items-center align-items-md-stretch px-5 px-md-8 px-lg-14 pt-7 pb-5 pb-md-7 mx-2 mx-md-0"
+          >
+            <div
+              class="about-me-content-group1 d-flex flex-column align-items-center"
+            >
               <img
                 src="../assets/images/time_book.png"
                 alt=""
                 class="about-me-content-photo"
               />
               <div class="mt-3">
-                <p class="font-family-noto text-primary b1 fw-bold mb-3">
+                <p
+                  class="font-family-noto text-primary text-center b1 fw-bold mb-3"
+                >
                   時代雜誌・最具影響力女性
                 </p>
-                <p class="font-family-noto b2">
-                  芭比Ｑ，做過各式各樣的職業，<br />
-                  帶領時尚，也見證過歷史興衰，<br />
-                  甚至出演電影，票房超過14億，<br />
-                  成為全球最具影響力女性。
+                <p class="font-family-noto b2 lh-m">
+                  芭比Ｑ，做過各式各樣的職業， 帶領時尚，也見證過歷史興衰，
+                  甚至出演電影，票房超過14億， 成為全球最具影響力女性。
                 </p>
               </div>
             </div>
-            <div class="d-flex flex-column justify-content-between">
-              <p class="font-family-hanzipen b1-l">台灣，是我的母國，</p>
-              <p class="font-family-hanzipen b1-l">
+            <!-- PC -->
+            <div
+              class="about-me-content-group2 d-none d-md-flex flex-column justify-content-between mt-lg-0 mt-5"
+            >
+              <p class="font-family-hanzipen">台灣，是我的母國，</p>
+              <p class="font-family-hanzipen">
                 我希望在這片美好的土地上，
               </p>
-              <p class="font-family-hanzipen b1-l">
-                推動更完善的<span class="text-primary head2">性別平權政策</span>
+              <p class="font-family-hanzipen">
+                推動更完善的<span class="about-me-content-group2-highlight text-primary head2 ms-2"
+                  >性別平權政策</span
+                >
               </p>
-              <p class="font-family-hanzipen b1-l">
-                並致力發展<span class="text-primary head2">台灣觀光</span>
+              <p class="font-family-hanzipen">
+                並致力發展<span class="about-me-content-group2-highlight text-primary head2 ms-2">台灣觀光</span>
               </p>
-              <p class="font-family-hanzipen b1-l">
-                為台灣的經濟帶來巨大效益，實現<span class="text-primary head2"
+              <p class="font-family-hanzipen">
+                為台灣的經濟帶來巨大效益，實現<span
+                  class="about-me-content-group2-highlight text-primary head2 ms-2"
                   >粉紅力量</span
                 >
               </p>
-              <p class="font-family-hanzipen b1-l">
-                支持每個人都可以有自己的夢想，成就無限可能，
+              <p class="font-family-hanzipen">
+                支持每個人都可以有自己的夢想，<br
+                  class="d-md-block d-lg-none"
+                />成就無限可能，
               </p>
-              <p class="font-family-hanzipen b1-l">
-                讓台灣成為最美好的<span class="text-primary head2"
+              <p class="font-family-hanzipen">
+                讓台灣成為最美好的<span class="about-me-content-group2-highlight text-primary head2 ms-2"
                   >Barbie land</span
                 >
               </p>
             </div>
+            <!-- PC -->
+            <!-- Mobile -->
+            <p
+              class="d-block d-md-none font-family-noto b1-mobile-l lh-m mt-12"
+            >
+              台灣，是我的母國，<br />
+              我希望在這片美好的土地上，<br />
+              推動更完善的<span class="text-primary">兩性平權政策</span>，<br />
+              並致力發展<span class="text-primary">台灣觀光</span>，<br />
+              為台灣的經濟帶來巨大效益，<br />
+              實現 <span class="text-primary">粉紅力量</span>。<br />
+              支持每人都可以有自己的夢想，<br />
+              成就無限可能，讓台灣成為最<br />美好的
+              <span class="text-primary">Barbie land</span>。
+            </p>
+            <!-- Mobile -->
           </div>
         </section>
         <!-- About End -->
         <!-- News Start -->
-        <section class="news pb-30">
-          <h1 class="news-title text-center mb-10">
-            <span class="head1-l font-family-bartex about-me-title-en me-3"
+        <section id="news" class="news mx-2 mx-lg-0 pb-20 pb-lg-30">
+          <h1 class="news-title text-center lh-1 mb-10">
+            <span class="head1-l font-family-bartex news-title-en me-3"
               >News</span
             >
-            <span class="about-me-title-tw head1-m font-family-noto fw-bold"
+            <span
+              class="news-title-tw head1-m head1-mobile font-family-noto fw-bold"
               >最新消息</span
             >
           </h1>
-          <ul class="news-list list-unstyled d-flex flex-lg-row flex-column justify-content-between mb-10">
-            <li class="news-list-item">
+          <ul
+            class="news-list list-unstyled d-flex flex-wrap flex-md-row flex-column justify-content-between mb-10"
+          >
+            <li class="news-list-item mb-5 mb-lg-0 d-flex align-items-stretch">
               <div class="card">
                 <div class="card-header d-flex">
                   <a
@@ -153,13 +213,16 @@
                   <p class="mb-2">
                     <a class="text-white" href="#">999,999,999個讚</a>
                   </p>
-                  <p class="mb-2">
-                    Barbie芭比 ✨ You Ken, I can肯尼找頭路 ✨
-                    阿姨，我不想努力了... 這種陋習通通砍掉砍掉🪓🪓
-                    我支持男女性別平權，擺脫Barbie and
-                    ken，你就是Ken，男性在職場一樣可以發光發熱...
-                    <a class="text-gray" href="#">更多</a>
-                  </p>
+                  <div class="news-list-item-wrap">
+                    <input type="checkbox" class="exp" id="exp">
+                    <p class="news-list-item-content mb-2" line-clamp="3">
+                      <label class="more-btn text-gray" for="exp"></label>
+                      Barbie芭比 ✨ You Ken, I can肯尼找頭路 ✨
+                      阿姨，我不想努力了... 這種陋習通通砍掉砍掉🪓🪓
+                      我支持男女性別平權，擺脫Barbie and
+                      ken，你就是Ken，男性在職場一樣可以發光發熱
+                    </p>
+                  </div>
                   <p class="mb-3">
                     <a class="text-gray" href="#">查看全部 987,654 則留言</a>
                   </p>
@@ -177,7 +240,7 @@
                 </div>
               </div>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item mb-5 mb-lg-0 d-flex align-items-stretch">
               <div class="card">
                 <div class="card-header d-flex">
                   <a
@@ -232,11 +295,14 @@
                   <p class="mb-2">
                     <a class="text-white" href="#">999,999,999個讚</a>
                   </p>
-                  <p class="mb-2">
-                    Barbie芭比 ✨今晚，阿嬤饋咖廣場舞 ✨
-                    想擁有健美的芭比身材嗎？不管是大朋友小朋友，大家一起動起來，越跳越年輕，特別邀請人氣韓國女團(G)I-DL...
-                    <a class="text-gray" href="#">更多</a>
-                  </p>
+                  <div class="news-list-item-wrap">
+                    <input type="checkbox" class="exp" id="exp2">
+                    <p class="news-list-item-content mb-2" line-clamp="3">
+                      <label class="more-btn text-gray" for="exp2"></label>
+                      Barbie芭比 ✨今晚，阿嬤饋咖廣場舞 ✨
+                    想擁有健美的芭比身材嗎？不管是大朋友小朋友，大家一起動起來，越跳越年輕，特別邀請人氣韓國女團(G)I-DL
+                    </p>
+                  </div>
                   <p class="mb-3">
                     <a class="text-gray" href="#">查看全部 987,654 則留言</a>
                   </p>
@@ -254,7 +320,7 @@
                 </div>
               </div>
             </li>
-            <li class="news-list-item">
+            <li class="news-list-item d-flex align-items-stretch">
               <div class="card">
                 <div class="card-header d-flex">
                   <a
@@ -309,11 +375,14 @@
                   <p class="mb-2">
                     <a class="text-white" href="#">999,999,999個讚</a>
                   </p>
-                  <p class="mb-2">
-                    Barbie芭比 ✨尋找平底鞋代言人 ✨
-                    長時間穿著高跟鞋站立或是行走，可能產生肌肉骨骼的傷害，我推動平底鞋運動，只要穿著芭比粉及平底鞋即可參加選美大會，尋找最有自信的平底鞋代言人。...
-                    <a class="text-gray" href="#">更多</a>
-                  </p>
+                  <div class="news-list-item-wrap">
+                    <input type="checkbox" class="exp" id="exp3">
+                    <p class="news-list-item-content mb-2" line-clamp="3">
+                      <label class="more-btn text-gray" for="exp3"></label>
+                      Barbie芭比 ✨尋找平底鞋代言人 ✨
+                    長時間穿著高跟鞋站立或是行走，可能產生肌肉骨骼的傷害，我推動平底鞋運動，只要穿著芭比粉及平底鞋即可參加選美大會，尋找最有自信的平底鞋代言人。
+                    </p>
+                  </div>
                   <p class="mb-3">
                     <a class="text-gray" href="#">查看全部 987,654 則留言</a>
                   </p>
@@ -333,7 +402,9 @@
             </li>
           </ul>
           <div class="d-flex justify-content-center">
-            <a href="#" class="btn btn-primary rounded-pill font-family-noto fw-medium ig-follow-btn text-white"
+            <a
+              href="#"
+              class="btn rounded-pill font-family-noto fw-medium ig-follow-btn lh-1"
               >追蹤芭比Q</a
             >
           </div>
@@ -341,197 +412,754 @@
         <!-- News End -->
       </div>
       <!-- Policy Start -->
-      <!-- <section class="policy">
-        <h1 class="policy-title"><span>Policy</span><span>政策建議</span></h1>
-        <ul class="policy-list list-unstyled">
-          <li class="policy-list-item position-relative">
+      <section id="policy" class="policy">
+        <h1 class="policy-title text-center lh-1 mb-8">
+          <span class="head1-l font-family-bartex policy-title-en me-3"
+            >Policy</span
+          >
+          <span
+            class="policy-title-tw head1-m head1-mobile font-family-noto fw-bold"
+            >政策建議</span
+          >
+        </h1>
+        <!-- PC -->
+          <div class="policy-list list-unstyled d-none d-lg-block mb-0">
+            <div class="policy-list-item">
+              <div class="policy-list-item-wrap position-relative mt-10">
+                <h2
+                  class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+                >
+                  <img src="../assets/images/性別平權.png" alt="" />
+                </h2>
+                <ul
+                  class="policy-type-list list-unstyled d-flex justify-content-between mb-0 px-10 pb-10"
+                >
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-primary head3 lh-1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                    >
+                      男性就業
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      每年撥款新台幣 10
+                      億元，為肯尼做職前訓練，並輔導就業。不再只是barbie and
+                      ken。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-primary head3 lh-1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                    >
+                      男廁獨立
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      每年撥款新台幣 20
+                      億元，全面改建男性公共廁所，設置規定加裝大片隔板、門、鎖。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-primary head3 lh-1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                    >
+                      男性服飾
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      換裝遊戲不應該只是芭比的權力，每年撥款30
+                      億元，全力扶植男性服裝設計師，設計肯尼服飾。
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="policy-list-item">
+              <div class="policy-list-item-wrap position-relative mt-10">
+                <h2
+                  class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+                >
+                  <img src="../assets/images/身心健康.png" alt="" />
+                </h2>
+                <ul
+                  class="policy-type-list list-unstyled d-flex justify-content-between mb-0 px-10 pb-10"
+                >
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-success head3 lh-1 lh-1 font-family-noto border-bottom border-success pb-3 mb-3"
+                    >
+                      醫療
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      每年撥款新台幣 10
+                      億元，給因長時間穿著高跟鞋產生生理傷害的芭比們，免費醫療服務。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-success head3 lh-1 lh-1 font-family-noto border-bottom border-success pb-3 mb-3"
+                    >
+                      健康
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      每年撥款新台幣 20
+                      億元，在全台所有便利商店、捷運站裡廣設健身房，想健身就健身。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-success head3 lh-1 lh-1 font-family-noto border-bottom border-success pb-3 mb-3"
+                    >
+                      訓練
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      每年撥款新台幣 30
+                      億元，針對bmi超標的民眾可以申請免費健身教練，回復健康身材。
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="policy-list-item">
+              <div class="policy-list-item-wrap position-relative mt-10">
+                <h2
+                  class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+                >
+                  <img src="../assets/images/觀光推廣.png" alt="" />
+                </h2>
+                <ul
+                  class="policy-type-list list-unstyled d-flex justify-content-between mb-0 px-10 pb-10"
+                >
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-danger head3 lh-1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                    >
+                      觀光巴士
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      設置免費觀光巴士，將國內旅遊與芭比文化做結合，打造最佳的打卡聖地與美食之旅。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-danger head3 lh-1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                    >
+                      演唱會
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      邀請世界級女團 blackpink
+                      每月在台灣固定開演唱會，增進外國歌迷促進觀光消費。
+                    </p>
+                  </li>
+                  <li class="policy-type-list-item">
+                    <h3
+                      class="policy-type-list-item-title text-center text-danger head3 lh-1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                    >
+                      遊樂園
+                    </h3>
+                    <p class="policy-type-list-item-content b1">
+                      撥款新台幣 100
+                      億元，設置全球最大芭比夢幻遊樂園，吸引外國遊客，發揚芭比文化。
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <!-- PC -->
+        <!-- Mobile -->
+        <div class="mobile-policy-list list-unstyled d-lg-none pt-10 mb-0">
+          <div
+            class="mobile-policy-list-item position-relative pt-10 pb-5 mx-5 mx-md-16 mb-14"
+          >
             <h2
-              class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+              class="mobile-policy-list-item-type position-absolute w-100 d-flex justify-content-center"
             >
-              <img src="../assets/images/性別平權.png" alt="" />
+              <img src="../assets/images/手機版性別平權.png" alt="" />
             </h2>
-            <ul class="policy-type-list list-unstyled d-flex">
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">男性就業</h3>
-                <p class="policy-type-list-item-content">
+            <ul
+              class="mobile-policy-type-list list-unstyled d-flex flex-column mb-0 px-5 px-md-10"
+            >
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-primary b1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                >
+                  男性就業
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   每年撥款新台幣 10
                   億元，為肯尼做職前訓練，並輔導就業。不再只是barbie and ken。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">男廁獨立</h3>
-                <p class="policy-type-list-item-content">
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-primary b1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                >
+                  男廁獨立
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   每年撥款新台幣 20
                   億元，全面改建男性公共廁所，設置規定加裝大片隔板、門、鎖。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">男性服飾</h3>
-                <p class="policy-type-list-item-content">
+              <li class="mobile-policy-type-list-item">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-primary b1 font-family-noto border-bottom border-primary pb-3 mb-3"
+                >
+                  男性服飾
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   換裝遊戲不應該只是芭比的權力，每年撥款30
                   億元，全力扶植男性服裝設計師，設計肯尼服飾。
                 </p>
               </li>
             </ul>
-          </li>
-          <li class="policy-list-item position-relative">
+          </div>
+          <div
+            class="mobile-policy-list-item position-relative pt-10 pb-5 mx-5 mx-md-16 mb-14"
+          >
             <h2
-              class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+              class="mobile-policy-list-item-type position-absolute w-100 d-flex justify-content-center"
             >
-              <img src="../assets/images/身心健康.png" alt="" />
+              <img src="../assets/images/手機版身心健康.png" alt="" />
             </h2>
-            <ul class="policy-type-list list-unstyled d-flex">
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">醫療</h3>
-                <p class="policy-type-list-item-content">
+            <ul
+              class="mobile-policy-type-list list-unstyled d-flex flex-column mb-0 px-5 px-md-10"
+            >
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-success b1 font-family-noto border-bottom border-success pb-3 mb-3"
+                >
+                  醫療
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   每年撥款新台幣 10
                   億元，給因長時間穿著高跟鞋產生生理傷害的芭比們，免費醫療服務。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">健康</h3>
-                <p class="policy-type-list-item-content">
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-success b1 font-family-noto border-bottom border-success pb-3 mb-3"
+                >
+                  健康
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   每年撥款新台幣 20
                   億元，在全台所有便利商店、捷運站裡廣設健身房，想健身就健身。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">訓練</h3>
-                <p class="policy-type-list-item-content">
+              <li class="mobile-policy-type-list-item">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-success b1 font-family-noto border-bottom border-success pb-3 mb-3"
+                >
+                  訓練
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
                   每年撥款新台幣 30
                   億元，針對bmi超標的民眾可以申請免費健身教練，回復健康身材。
                 </p>
               </li>
             </ul>
-          </li>
-          <li class="policy-list-item position-relative">
+          </div>
+          <div
+            class="mobile-policy-list-item position-relative pt-10 pb-5 mx-5 mx-md-16"
+          >
             <h2
-              class="policy-list-item-type w-100 d-flex justify-content-center position-absolute"
+              class="mobile-policy-list-item-type position-absolute w-100 d-flex justify-content-center"
             >
-              <img src="../assets/images/觀光推廣.png" alt="" />
+              <img src="../assets/images/手機版觀光推廣.png" alt="" />
             </h2>
-            <ul class="policy-type-list list-unstyled d-flex">
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">觀光巴士</h3>
-                <p class="policy-type-list-item-content">
-                  設置免費觀光巴士，將國內旅遊與芭比文化做結合，打造最佳的打卡聖地與美食之旅。
+            <ul
+              class="mobile-policy-type-list list-unstyled d-flex flex-column mb-0 px-5 px-md-10"
+            >
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-danger b1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                >
+                  醫療
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
+                  每年撥款新台幣 10
+                  億元，給因長時間穿著高跟鞋產生生理傷害的芭比們，免費醫療服務。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">演唱會</h3>
-                <p class="policy-type-list-item-content">
-                  邀請世界級女團blackpink每月在台灣固定開演唱會，增進外國歌迷促進觀光消費。
+              <li class="mobile-policy-type-list-item mb-3">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-danger b1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                >
+                  健康
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
+                  每年撥款新台幣 20
+                  億元，在全台所有便利商店、捷運站裡廣設健身房，想健身就健身。
                 </p>
               </li>
-              <li class="policy-type-list-item">
-                <h3 class="policy-type-list-item-title">遊樂園</h3>
-                <p class="policy-type-list-item-content">
-                  撥款新台幣 100
-                  億元，設置全球最大芭比夢幻遊樂園，吸引外國遊客，發揚芭比文化。
+              <li class="mobile-policy-type-list-item">
+                <h3
+                  class="mobile-policy-type-list-item-title text-center text-danger b1 font-family-noto border-bottom border-danger pb-3 mb-3"
+                >
+                  訓練
+                </h3>
+                <p class="mobile-policy-type-list-item-content">
+                  每年撥款新台幣 30
+                  億元，針對bmi超標的民眾可以申請免費健身教練，回復健康身材。
                 </p>
               </li>
             </ul>
-          </li>
-        </ul>
-      </section> -->
+          </div>
+        </div>
+        <!-- Mobile -->
+      </section>
       <!-- Policy End -->
       <div class="container">
         <!-- Donate Start -->
-        <!-- <section class="donate">
-          <h1 class="donate-title"></h1>
-          <p class="donate-description"></p>
-          <div class="donate-current-status">
-            <p class="donate-current-status-text"></p>
-            <p class="donate-current-status-total"></p>
+        <section id="donate" class="donate pb-5 pb-md-30 mx-2 mx-md-0">
+          <h1 class="donate-title lh-1 text-center mb-10">
+            <span class="head1-l font-family-bartex donate-title-en me-3"
+              >Donate</span
+            ><span
+              class="donate-title-tw head1-m head1-mobile font-family-noto fw-bold"
+              >小物抖內</span
+            >
+          </h1>
+          <p
+            class="donate-description d-none d-lg-block font-family-noto lh-m b1 b1-mobile-l text-center text-white mb-10"
+          >
+            堅持選舉只花必要開支，小額募款公開透明，<br />
+            您可以兌換小物，也可以直接捐款。珍惜每一筆捐款，<br />
+            匯集大家的力量，再創粉紅奇蹟！
+          </p>
+          <p
+            class="donate-description d-lg-none font-family-noto lh-m b1-mobile-l text-center text-white mb-10"
+          >
+            堅持選舉只花必要開支，<br />
+            小額募款公開透明，<br />
+            您可以兌換小物，也可以直接捐款。<br />
+            珍惜每一筆捐款，<br />
+            匯集大家的力量，再創粉紅奇蹟！
+          </p>
+          <div class="donate-current-status text-center py-3 mb-5">
+            <p class="donate-current-status-text font-family-noto b2">
+              目前累計總金額 NT$
+            </p>
+            <p
+              class="donate-current-status-total font-family-inter fw-bold head2 lh-1"
+            >
+              6,543,210
+            </p>
           </div>
-          <ul class="donate-list list-unstyled">
-            <li class="donate-list-item">
-              <h4 class="donate-list-item-type d-flex justify-content-center">
+          <ul
+            class="donate-list list-unstyled d-flex flex-wrap justify-content-between mb-0"
+          >
+            <li
+              class="donate-list-item py-3 pt-md-4 pb-md-8 px-3 px-md-15 mb-5"
+            >
+              <h4
+                class="donate-list-item-type d-none d-md-flex justify-content-center mb-8"
+              >
                 <img src="../assets/images/好健康.png" alt="" />
               </h4>
-              <div class="donate-list-item-body d-flex">
+              <div
+                class="donate-list-item-body d-flex flex-column flex-md-row align-items-center justify-content-md-around justify-content-lg-between"
+              >
                 <div class="donate-list-item-photo">
                   <img src="../assets/images/donate_shoe 1.png" alt="" />
                 </div>
-                <div class="donate-list-item-content">
-                  <h3 class="donate-list-item-name"></h3>
-                  <p class="donate-list-item-price"><span>NT$</span>6,000</p>
-                  <p class="donate-list-item-already">
-                    <span>234,567</span>人已贊助
+                <div class="donate-list-item-content text-end pt-1 pt-md-10">
+                  <h3
+                    class="donate-list-item-name d-none d-md-block font-family-noto fw-bold text-primary mb-5"
+                  >
+                    溜冰鞋
+                  </h3>
+                  <p
+                    class="donate-list-item-price font-family-inter mb-0 mb-md-11"
+                  >
+                    <span class="me-2 lh-1">NT$</span
+                    ><span class="head2 head2-mobile-m fw-bold lh-1">600</span>
+                  </p>
+                  <p class="donate-list-item-already d-none d-md-block">
+                    <span class="font-family-inter">234,567</span
+                    ><span class="font-family-noto">人已贊助</span>
                   </p>
                 </div>
               </div>
-              <a href="#" class="btn btn-primary rounded-pill text-white"
-                >抖內去</a
+              <div class="d-flex justify-content-center mt-3 mt-md-8">
+                <button
+                  class="donate-list-item-btn donate-btn d-none d-md-inline-block btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="0"
+                >
+                  抖內去
+                </button>
+                <button
+                  class="donate-list-item-btn mobile-donate-btn d-block d-md-none btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="0"
+                >
+                  抖內去
+                </button>
+              </div>
+            </li>
+            <li
+              class="donate-list-item py-3 pt-md-4 pb-md-8 px-3 px-md-15 mb-5"
+            >
+              <h4
+                class="donate-list-item-type d-none d-md-flex justify-content-center mb-3 mb-md-8"
               >
+                <img src="../assets/images/好身材.png" alt="" />
+              </h4>
+              <div
+                class="donate-list-item-body d-flex flex-column flex-md-row align-items-center justify-content-md-around justify-content-lg-between"
+              >
+                <div class="donate-list-item-photo">
+                  <img src="../assets/images/donate_cloth 1.png" alt="" />
+                </div>
+                <div class="donate-list-item-content text-end pt-1 pt-md-10">
+                  <h3
+                    class="donate-list-item-name d-none d-md-block font-family-noto fw-bold text-primary mb-5"
+                  >
+                    條紋泳衣
+                  </h3>
+                  <p
+                    class="donate-list-item-price font-family-inter mb-0 mb-md-11"
+                  >
+                    <span class="me-2 lh-1">NT$</span
+                    ><span class="head2 head2-mobile-m fw-bold lh-1"
+                      >6,000</span
+                    >
+                  </p>
+                  <p class="donate-list-item-already d-none d-md-block">
+                    <span class="font-family-inter">234,567</span
+                    ><span class="font-family-noto">人已贊助</span>
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mt-md-6">
+                <button
+                  class="donate-list-item-btn donate-btn d-none d-md-inline-block btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="1"
+                >
+                  抖內去
+                </button>
+                <button
+                  class="donate-list-item-btn mobile-donate-btn d-block d-md-none btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="1"
+                >
+                  抖內去
+                </button>
+              </div>
+            </li>
+            <li
+              class="donate-list-item py-3 pt-md-4 pb-md-8 px-3 px-md-15 mb-0 mb-md-5 mb-lg-0"
+            >
+              <h4
+                class="donate-list-item-type d-none d-md-flex justify-content-center mb-8"
+              >
+                <img src="../assets/images/好出遊.png" alt="" />
+              </h4>
+              <div
+                class="donate-list-item-body d-flex flex-column flex-md-row align-items-center justify-content-md-around justify-content-lg-between"
+              >
+                <div class="donate-list-item-photo">
+                  <img src="../assets/images/donate_car 1.png" alt="" />
+                </div>
+                <div class="donate-list-item-content text-end pt-1 pt-md-10">
+                  <h3
+                    class="donate-list-item-name d-none d-md-block font-family-noto fw-bold text-primary mb-5"
+                  >
+                    超跑模型
+                  </h3>
+                  <p
+                    class="donate-list-item-price font-family-inter mb-0 mb-md-11"
+                  >
+                    <span class="me-2 lh-1">NT$</span
+                    ><span class="head2 head2-mobile-m fw-bold lh-1"
+                      >60,000</span
+                    >
+                  </p>
+                  <p class="donate-list-item-already d-none d-md-block">
+                    <span class="font-family-inter">234,567</span
+                    ><span class="font-family-noto">人已贊助</span>
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3 mt-md-7">
+                <button
+                  class="donate-list-item-btn donate-btn d-none d-md-inline-block btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="2"
+                >
+                  抖內去
+                </button>
+                <button
+                  class="donate-list-item-btn mobile-donate-btn d-block d-md-none btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="2"
+                >
+                  抖內去
+                </button>
+              </div>
+            </li>
+            <li class="donate-list-item py-3 pt-md-4 pb-md-8 px-3 px-md-15">
+              <h4
+                class="donate-list-item-type d-none d-md-flex justify-content-center mb-8"
+              >
+                <img src="../assets/images/好心意.png" alt="" />
+              </h4>
+              <div
+                class="donate-list-item-body d-flex flex-column flex-md-row justify-content-md-around justify-content-lg-between mb-auto"
+              >
+                <div class="donate-list-item-photo">
+                  <img src="../assets/images/donate_piggy.png" alt="" />
+                </div>
+                <div class="donate-list-item-content text-end pt-3 pt-md-15">
+                  <h3
+                    class="donate-list-item-name d-none d-md-block font-family-noto fw-bold text-primary mb-5"
+                  >
+                    直接捐款
+                  </h3>
+                  <p
+                    class="d-md-none font-family-noto fw-bold b1 lh-1 text-center"
+                  >
+                    直接捐款
+                  </p>
+                  <input
+                    class="donate-list-item-content-much d-none d-md-block form-control text-black font-family-noto border-0 py-5 px-4"
+                    type="number"
+                    placeholder="NT$                請輸入金額"
+                    aria-label="donate input"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-6 mt-md-14">
+                <button
+                  class="donate-list-item-btn donate-btn d-none d-md-inline-block btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="3"
+                >
+                  抖內去
+                </button>
+                <button
+                  class="donate-list-item-btn mobile-donate-btn d-block d-md-none btn font-family-noto fw-medium rounded-pill b1 b1-mobile-m py-3 py-md-4 lh-1"
+                  data-index="3"
+                >
+                  抖內去
+                </button>
+              </div>
             </li>
           </ul>
-        </section> -->
+        </section>
         <!-- Donate End -->
       </div>
       <!-- FeedBack Start -->
-      <!-- <section class="feedback position-relative">
-        <h1 class="feedback-title"><span>Mail</span><span>服務信箱</span></h1>
-        <div class="feedback-group container">
-          <h3>芭比Q聽你的</h3>
-          <form class="feedback-group-form">
-            <div class="mb-3">
-              <label for="exampleInputName1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputName1"
-                aria-describedby="nameHelp"
-              />
-              <div id="nameHelp" class="form-text">
-                We'll never share your name with anyone else.
+      <section class="feedback pt-5 pt-md-10">
+        <h1 class="feedback-title lh-1 text-center mb-0">
+          <span class="head1-l font-family-bartex feedback-title-en me-3"
+            >Mail</span
+          ><span
+            class="feedback-title-tw head1-m head1-mobile font-family-noto fw-bold"
+            >服務信箱</span
+          >
+        </h1>
+        <div
+          class="feedback-wrap container position-relative px-5 px-md-3 pt-10 pb-10"
+        >
+          <div class="feedback-group px-0 pt-5 pb-10 pt-md-10">
+            <div class="d-flex justify-content-between px-5 ps-md-20 pe-md-17">
+              <form class="feedback-group-form">
+                <h3
+                  class="font-family-noto head3 head2-mobile-m text-primary lh-1 fw-bold text-center mb-10"
+                >
+                  芭比Q聽你的
+                </h3>
+                <div class="inner-addon left-addon mb-5">
+                  <!-- <i class="glyphicon glyphicon-user"></i> -->
+                  <img
+                    src="../assets/images/contact-username.svg"
+                    alt=""
+                    class="glyphicon glyphicon-user align-middle"
+                  />
+                  <input
+                    type="text"
+                    class="form-control feedback-group-form-input text-black b2 lh-1 ps-14 py-4 border-0"
+                    placeholder="您的大名"
+                  />
+                </div>
+                <div class="inner-addon left-addon mb-5">
+                  <!-- <i class="glyphicon glyphicon-user"></i> -->
+                  <img
+                    src="../assets/images/contact-email.svg"
+                    alt=""
+                    class="glyphicon glyphicon-user align-middle"
+                  />
+                  <input
+                    type="email"
+                    class="form-control feedback-group-form-input text-black b2 lh-1 ps-14 py-4 border-0"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Email"
+                  />
+                  <!-- <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div> -->
+                </div>
+                <div class="inner-addon left-addon mb-5">
+                  <!-- <i class="glyphicon glyphicon-user"></i> -->
+                  <img
+                    src="../assets/images/contact-tel.svg"
+                    alt=""
+                    class="glyphicon glyphicon-user align-middle"
+                  />
+                  <input
+                    type="tel"
+                    class="form-control feedback-group-form-input text-black b2 lh-1 ps-14 py-4 border-0"
+                    id="exampleInputTel"
+                    aria-describedby="telHelp"
+                    placeholder="手機號碼"
+                  />
+                  <!-- <div id="telHelp" class="form-text">
+                    We'll never share your tel with anyone else.
+                  </div> -->
+                </div>
+                <div class="mb-3">
+                  <!-- <label for="exampleFormControlTextarea1" class="form-label"
+                    >Example textarea</label
+                  > -->
+                  <textarea
+                    class="form-control feedback-group-form-textarea text-black b2 border-0 px-4 py-5 mb-10"
+                    id="exampleFormControlTextarea1"
+                    rows="5"
+                    placeholder="您的意見"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn feedback-group-form-submit b1 rounded-pill w-100 font-family-noto fw-medium lh-1"
+                >
+                  送出
+                </button>
+              </form>
+              <div class="mailbox position-relative d-none d-lg-block">
+                <img
+                  src="../assets/images/mailbox.png"
+                  alt=""
+                  class="position-absolute"
+                />
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="inputTel" class="form-label">Password</label>
-              <input type="tel" class="form-control" id="inputTel" />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >Example textarea</label
-              >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="3"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary rounded-pill w-100 text-white"
-            >
-              送出
-            </button>
-          </form>
+          </div>
         </div>
-        <div class="mailbox position-absolute">
-          <img src="../assets/images/mailbox.png" alt="" />
-        </div>
-      </section> -->
+      </section>
       <!-- FeedBack End -->
     </div>
     <%- include('./layout/footer'); -%>
+
+    <!-- PC donate modal start -->
+    <div
+      class="modal fade"
+      id="donateModal"
+      tabindex="-1"
+      aria-labelledby="donateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered max-width-lg">
+        <div class="modal-content position-relative">
+          <div
+            class="modal-header border-bottom-0 position-absolute z-3 w-100 py-0 px-6"
+          ></div>
+          <div class="modal-body font-family-noto px-10 pt-20 pb-10"></div>
+          <div class="modal-footer border-top-0 pt-0 pb-10">
+            <button
+              type="button"
+              aria-label="Confirm"
+              class="btn confirm-donate font-family-noto lh-1 b1 fw-medium rounded-pill py-4 mx-auto my-0"
+            >
+              確認抖內
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PC donate modal end -->
+
+    <!-- Mobile donate modal start -->
+    <div
+      class="modal fade"
+      id="mobileDonateModal"
+      tabindex="-1"
+      aria-labelledby="mobileDonateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-6">
+        <div class="modal-content position-relative pb-5">
+          <div
+            class="modal-header border-bottom-0 position-absolute z-3 w-100 h-0 py-0 px-6"
+          ></div>
+          <div class="modal-body font-family-noto px-5 pt-10 pb-0">
+
+          </div>
+          <!-- <div class="modal-footer border-top-0 pt-0 pb-10">
+          <button
+            type="button"
+            aria-label="Confirm"
+            class="btn btn-primary confirm-donate font-family-noto text-white lh-1 b1 fw-medium rounded-pill py-4 mx-auto my-0"
+          >
+            確認抖內
+          </button>
+        </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Mobile donate modal end -->
+
+    <!-- PC donate modal success modal start -->
+    <div
+      class="modal fade"
+      id="donateSuccessModal"
+      tabindex="-1"
+      aria-labelledby="donateSuccessModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="../assets/images/donate-success.png" alt="" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="btn btn-primary close-donate font-family-noto text-white lh-1 b1 fw-medium rounded-pill py-4 mx-auto my-0"
+            >
+              關閉
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PC donate modal success modal end-->
+
+    <!-- social media button start -->
+    <div class="mobile-social position-fixed">
+      <div class="mobile-social-list">
+          <div class="mobile-social-list-item d-flex justify-content-center mb-2"><a href="#" class="mobile-social-list-item-link"><img src="../assets/images/mobile-youtube.svg" alt=""></a></div>
+          <div class="mobile-social-list-item d-flex justify-content-center mb-2"><a href="#" class="mobile-social-list-item-link"><img src="../assets/images/mobile-twitter.svg" alt=""></a></div>
+          <div class="mobile-social-list-item d-flex justify-content-center mb-2"><a href="#" class="mobile-social-list-item-link"><img src="../assets/images/mobile-line.svg" alt=""></a></div>
+          <div class="mobile-social-list-item d-flex justify-content-center mb-2"><a href="#" class="mobile-social-list-item-link"><img src="../assets/images/mobile-ig.svg" alt=""></a></div>
+          <div class="mobile-social-list-item d-flex justify-content-center"><a href="#" class="mobile-social-list-item-link"><img src="../assets/images/mobile-fb.svg" alt=""></a></div>
+      </div>
+      <a href="#" class="mobile-social-media-btn d-inline-block d-lg-none"></a>
+
+    </div>
+    <!-- social media button end -->
+
+    <script
+      src="https://c.webfontfree.com/c.js?f=MYoyoHK-Medium"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

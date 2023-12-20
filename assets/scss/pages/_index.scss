@@ -1,14 +1,29 @@
 .wrap {
-  background-color: $blue-600;
+  // background-color: $blue-600;
+  background-color: #009efe;
+  max-width: 1400px;
 }
 
-.bartex-title {
-  // box-shadow: 4px 4px 0px 0px #990067;
+.banner {
+  // margin-bottom: 300px;
+  &-animate {
+    // margin-top: -160px;
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    object-position: center bottom;
+    @media (max-width: 768px) {
+      margin-top: 0px;
+    }
+    @media (max-width: 375px) {
+      object-position: center center;
+      object-fit: cover;
+    }
+  }
 }
 
 .about-me {
   &-title {
-    line-height: 1;
     &-en {
       color: $white;
       text-shadow: 4px 4px 0 $pink-300;
@@ -33,16 +48,54 @@
       width: 280px;
       height: 356px;
     }
+    &-group1 {
+      width: 29%;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+    &-group2 {
+      font-size: 1.875rem;
+      @media (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+      &-highlight {
+        font-size: 2.5rem;
+        @media (max-width: 1200px) {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 
 .news {
+  &-title {
+    &-en {
+      color: $white;
+      text-shadow: 4px 4px 0 $pink-300;
+    }
+    &-tw {
+      color: $pink-300;
+      text-shadow: 
+        /* first layer at 1px */ -1px -1px 0px $white,
+        0px -1px 0px $white, 1px -1px 0px $white, -1px 0px 0px $white,
+        1px 0px 0px $white, -1px 1px 0px $white, 0px 1px 0px $white, 1px 1px 0px $white,
+        /* second layer at 2px */ -2px -2px 0px $white, -1px -2px 0px $white,
+        0px -2px 0px $white, 1px -2px 0px $white, 2px -2px 0px $white,
+        2px -1px 0px $white, 2px 0px 0px $white, 2px 1px 0px $white, 2px 2px 0px $white,
+        1px 2px 0px $white, 0px 2px 0px $white, -1px 2px 0px $white, -2px 2px 0px $white,
+        -2px 1px 0px $white, -2px 0px 0px $white, -2px -1px 0px $white;
+    }
+  }
   &-list {
     &-item {
       width: 31.03448276%;
+      @media (max-width: 768px) {
+        width: 48%;
+      }
       @media (max-width: 576px) {
-        width: 98%;
-        margin-bottom: 20px;
+        width: 100%;
       }
       &-avatar {
         width: 30px;
@@ -53,8 +106,64 @@
       &-photo {
         // width: 31.03448276%
       }
+      &-wrap {
+        display: flex;
+      }
+      &-content {
+        line-height: 1.5;
+        max-height: 4.5em;
+        overflow: hidden;
+        transition: .3s max-height;
+        &::before {
+          content: '';
+          float: right;
+          width: 0; /*設定為0，或者不設定寬度*/
+          height: 100%;
+          margin-bottom: -24px;
+        }
+      }
     }
   }
+}
+
+// reference: https://juejin.cn/post/6963904955262435336
+
+[line-clamp="3"] {
+  max-height: 4.5em;
+}
+
+.more-btn {
+  float: right;
+  clear: both;
+  &::before {
+    content: '...';
+    position: absolute;
+    // left: -10px;
+    color: $white;
+    transform: translateX(-100%);
+  }
+  &::after {
+    content:'更多';
+    cursor: pointer;
+  }
+}
+
+.exp:checked+.news-list-item-content {
+  // max-height: none;
+  max-height: 120px;
+  .more-btn {
+    &::before {
+      visibility: hidden; /*在展開狀態下隱藏省略號*/
+    }
+    &::after {
+      content:'縮起';
+      cursor: pointer;
+    }
+  }
+}
+
+.exp {
+  display: none;
 }
 
 .avatar-wrap {
@@ -83,25 +192,92 @@
   align-items: center;
   height: 60px;
   font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1;
   width: 31.03448276%;
+  background-color: $primary;
+  color: $white;
+  &:focus {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+  &:hover {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+  &:active {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+  }
   @media (max-width: 568px) {
     width: 98%;
   }
 }
 
 .policy {
+  width: 82.8571%;
+  margin: 0 auto;
+  padding-bottom: 176px;
+  @media (max-width: 1024px) {
+    width: 75%;
+  }
+  @media (max-width:768px) {
+    padding-bottom: 60px;
+  }
+  &-title {
+    &-en {
+      color: $white;
+      text-shadow: 4px 4px 0 $pink-300;
+    }
+    &-tw {
+      color: $pink-300;
+      text-shadow: 
+        /* first layer at 1px */ -1px -1px 0px $white,
+        0px -1px 0px $white, 1px -1px 0px $white, -1px 0px 0px $white,
+        1px 0px 0px $white, -1px 1px 0px $white, 0px 1px 0px $white, 1px 1px 0px $white,
+        /* second layer at 2px */ -2px -2px 0px $white, -1px -2px 0px $white,
+        0px -2px 0px $white, 1px -2px 0px $white, 2px -2px 0px $white,
+        2px -1px 0px $white, 2px 0px 0px $white, 2px 1px 0px $white, 2px 2px 0px $white,
+        1px 2px 0px $white, 0px 2px 0px $white, -1px 2px 0px $white, -2px 2px 0px $white,
+        -2px 1px 0px $white, -2px 0px 0px $white, -2px -1px 0px $white;
+    }
+  }
   &-list {
     &-item {
       &-type {
         top: -32px;
       }
+      &-wrap {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 24px;
+      }
+    }
+    &-prev {
+      width: 60px;
+      height: 60px;
+      background-image: url("@/images/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
   &-type {
     &-list {
+      padding-top: 90px;
       &-item {
+        width: 26.43965517%;
+      }
+    }
+  }
+}
+
+.mobile-policy {
+  &-list {
+    &-item {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      &-type {
+        top: -32px;
       }
     }
   }
@@ -109,40 +285,340 @@
 
 .donate {
   &-title {
+    &-en {
+      color: $white;
+      text-shadow: 4px 4px 0 $pink-300;
+    }
+    &-tw {
+      color: $pink-300;
+      text-shadow: 
+        /* first layer at 1px */ -1px -1px 0px $white,
+        0px -1px 0px $white, 1px -1px 0px $white, -1px 0px 0px $white,
+        1px 0px 0px $white, -1px 1px 0px $white, 0px 1px 0px $white, 1px 1px 0px $white,
+        /* second layer at 2px */ -2px -2px 0px $white, -1px -2px 0px $white,
+        0px -2px 0px $white, 1px -2px 0px $white, 2px -2px 0px $white,
+        2px -1px 0px $white, 2px 0px 0px $white, 2px 1px 0px $white, 2px 2px 0px $white,
+        1px 2px 0px $white, 0px 2px 0px $white, -1px 2px 0px $white, -2px 2px 0px $white,
+        -2px 1px 0px $white, -2px 0px 0px $white, -2px -1px 0px $white;
+    }
   }
   &-list {
     &-item {
       width: 49.13793%;
       background: rgba(255, 255, 255, 0.7);
-      border-radius: 6px;
+      border-radius: 24px;
+      @media(max-width: 768px) {
+        width: 100%;
+      }
+      @media (max-width: 568px) {
+        width: 46.86567164%;
+      }
       &-type {
+      }
+      &-content {
+        &-much {
+          max-width: 210px;
+          box-shadow: 0px 0px 8px 0px rgba(0, 68, 102, 0.2) inset;
+        }
       }
       &-photo {
         img {
           width: 200px;
         }
       }
+      &-btn {
+        width: 80%;
+        background-color: $primary;
+        color: $white;
+        &:focus {
+          color: $primary;
+          background-color: $white;
+          border: 1px solid $primary;
+        }
+        &:hover {
+          color: $primary;
+          background-color: $white;
+          border: 1px solid $primary;
+        }
+        &:active {
+          color: $primary;
+          background-color: $white;
+          border: 1px solid $primary;
+        }
+        @media (max-width: 576px) {
+          width: 75.18796992%;
+        }
+      }
+    }
+  }
+  &-current-status {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    color: $gray-300;
+    &-text {
+    }
+    &-total {
+      
     }
   }
 }
 
 .feedback {
-  padding-bottom: 2.5rem;
   background-image: url("@/images/bg_home.png");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+  @media (max-width: 576px) {
+    background-image: none;
+  }
+  &-title {
+    &-en {
+      color: $white;
+      text-shadow: 4px 4px 0 $pink-300;
+    }
+    &-tw {
+      color: $pink-300;
+      text-shadow: 
+        /* first layer at 1px */ -1px -1px 0px $white,
+        0px -1px 0px $white, 1px -1px 0px $white, -1px 0px 0px $white,
+        1px 0px 0px $white, -1px 1px 0px $white, 0px 1px 0px $white, 1px 1px 0px $white,
+        /* second layer at 2px */ -2px -2px 0px $white, -1px -2px 0px $white,
+        0px -2px 0px $white, 1px -2px 0px $white, 2px -2px 0px $white,
+        2px -1px 0px $white, 2px 0px 0px $white, 2px 1px 0px $white, 2px 2px 0px $white,
+        1px 2px 0px $white, 0px 2px 0px $white, -1px 2px 0px $white, -2px 2px 0px $white,
+        -2px 1px 0px $white, -2px 0px 0px $white, -2px -1px 0px $white;
+    }
+  }
   &-group {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 24px;
     &-form {
-      width: 41.37931034%;
+      width: 47.43084%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &-input {
+        border-radius: 12px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 68, 102, 0.2) inset;
+      }
+      &-textarea {
+        border-radius: 12px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 68, 102, 0.2) inset;
+      }
+      &-submit {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        background-color: $primary;
+        color: $white;
+        &:focus {
+          background-color: $white;
+          border: 1px solid $primary;
+          color: $primary;
+        }
+        &:hover {
+          background-color: $white;
+          border: 1px solid $primary;
+          color: $primary;
+        }
+        &:active {
+          background-color: $white;
+          border: 1px solid $primary;
+          color: $primary;
+        }
+      }
     }
   }
 }
 
 .mailbox {
-  width: 35.14285714%;
-  bottom: 0;
-  right: 188px;
+  width: 48.6166%;
+  margin-bottom: -0px;
+  img {
+    top: 80px;
+    height: 100%;
+  }
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+position: absolute;
+padding: 18px 16px;
+pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.slick-prev {
+  left: -86px;
+  width: 60px;
+  height: 60px;
+  &::before {
+    content: "";
+    display: inline-block;
+    color: transparent;
+    background-image: url("@/images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.slick-next {
+  right: -86px;
+  width: 60px;
+  height: 60px;
+  &::before {
+    content: "";
+    display: inline-block;
+    color: transparent;
+    background-image: url("@/images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    transform: rotate(180deg);
+  }
+}
+
+.slick-dots {
+  bottom: -40px;
+  li {
+    button {
+      &::before {
+        opacity: 1;
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
+  li.slick-active {
+    overflow: visible !important;
+    button {
+      &::before {
+        font-size: 16px;
+        color: $pink;
+      }
+    }
+    &:nth-of-type(even) {
+      button {
+        &::before {
+          color: $green;
+        }
+      }
+    }
+    &:last-of-type {
+      button {
+        &::before {
+          color: #CB6600;
+        }
+      }
+    }
+  }
+}
+
+.slick-disabled {
+  opacity: 0;
+  pointer-events:none;
+}
+
+.modal-dialog {
+}
+
+.modal-content {
+  // background: rgba(255, 255, 255, 0.7);
+  background: $gray-999;
+  @media (max-width: 576px) {
+    // overflow: hidden;
+    
+    // height: 60vh;
+  }
+  ;
+}
+
+#mobileDonateModal .modal-content {
+  @media (max-width: 576px) {
+    // height: 79vh;
+  }
+}
+
+.mobile-donate-success-photo {
+  width: 27.52293578%;
+}
+
+.donate-modal {
+  &-title {
+    top: -38px;
+    left: 20px;
+    @media (max-width: 576px) {
+      left: 0;
+      top: 3px;
+    }
+  }
+  &-info-input {
+    height: 64px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 68, 102, 0.2) inset;
+  }
+}
+
+.confirm-donate {
+  width: 41.1899%;
+  color: $white;
+  background-color: $primary;
+  &:focus {
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $primary;
+  }
+  &:hover {
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $primary;
+  }
+  &:active {
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $primary;
+  }
+}
+
+.close-donate {
+  width: 59.4537815%;
+}
+
+.mobile-social-media-btn {
+  bottom: 0px;
+  right: 0px;
+  width: 120px;
+  height: 120px;
+  background-image: url("@/images/btn-open.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all .3s;
+}
+.mobile-social-media-btn.close {
+  background-image: url("@/images/btn-close.svg");
+}
+
+.mobile-social {
+  bottom: 0px;
+  right: 0px;
+  &-list {
+    display: none;
+    &-item {
+    }
+  }
 }

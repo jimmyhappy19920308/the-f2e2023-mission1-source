@@ -1,38 +1,78 @@
+.head1-m {
+  font-size: 3.125rem; //50px;
+}
+
+.head2 {
+  font-size: 2.5rem;//40px;
+}
+
+.head3 {
+  font-size: 2.125rem//34px;
+}
+.head4 {
+  font-size: 1.75rem//28px;
+}
+
+.head1-l {
+  font-size: 5rem;//80px;
+  @media (max-width: 576px) {
+    font-size: 3.125rem;//50px;
+  }
+}
+
+.head1-mobile {
+  @media (max-width: 576px) {
+    font-size: 2.125rem;//34px;
+  }
+}
+
+.head2-mobile {
+  @media (max-width: 576px) {
+    font-size: 1.75rem//28px;
+  }
+}
+
+.head2-mobile-m {
+  @media (max-width: 576px) {
+    font-size: 1.5rem//24px;
+  }
+}
+
 .b1-l {
-  font-size: 1.875rem;
+  font-size: 1.875rem;//30px
 }
 .b1 {
   font-size: 1.5rem; // 24px
-}
-.b1-sm-m {
+} 
+.b1-mobile-m {
   @media (max-width: 576px) {
     font-size: 1rem; // 16px
   }
 }
 
-.b1-sm-l {
+.b1-mobile-l {
   @media (max-width: 576px) {
     font-size: 1.25rem; // 20px 
-  }
+  } 
 }
 
 .b2 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; //20px
 }
 
-.b2-sm {
+.b2-mobile {
   @media (max-width: 576px) {
     font-size: 1rem; // 16px
   }
 }
 
-.b3-sm {
+.b3-mobile {
   @media (max-width: 576px) {
     font-size: 1rem; // 16px
   }
 }
 
 .b4 {
-  font-size: .75rem;
+  font-size: .75rem; // 12px
 }
 
